@@ -1,6 +1,6 @@
-package com.bespinglobal.alertnow.logcollector.rest.model;
+package com.bespinglobal.alertnow.rest.model;
 
-import com.bespinglobal.alertnow.logcollector.Platform;
+import com.bespinglobal.alertnow.Platform;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

@@ -1,7 +1,7 @@
-package com.bespinglobal.alertnow.logcollector;
+package com.bespinglobal.alertnow;
 
-import com.bespinglobal.alertnow.logcollector.rest.RestService;
-import com.bespinglobal.alertnow.logcollector.rest.RestServiceImpl;
+import com.bespinglobal.alertnow.rest.RestService;
+import com.bespinglobal.alertnow.rest.RestServiceImpl;
 
 import javax.validation.constraints.NotNull;
 

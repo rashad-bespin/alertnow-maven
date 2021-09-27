@@ -1,9 +1,9 @@
-package com.bespinglobal.alertnow.logcollector.rest;
+package com.bespinglobal.alertnow.rest;
 
-import com.bespinglobal.alertnow.logcollector.Log;
-import com.bespinglobal.alertnow.logcollector.Options;
-import com.bespinglobal.alertnow.logcollector.Platform;
-import com.bespinglobal.alertnow.logcollector.rest.model.LogRequest;
+import com.bespinglobal.alertnow.Log;
+import com.bespinglobal.alertnow.Options;
+import com.bespinglobal.alertnow.Platform;
+import com.bespinglobal.alertnow.rest.model.LogRequest;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;

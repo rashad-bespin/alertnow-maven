@@ -1,4 +1,4 @@
-package com.bespinglobal.alertnow.logcollector;
+package com.bespinglobal.alertnow;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
