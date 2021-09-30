@@ -1,0 +1,10 @@
+com/bespinglobal/alertnow/Platform.class
+com/bespinglobal/alertnow/rest/RestService.class
+com/bespinglobal/alertnow/rest/model/LogRequest.class
+com/bespinglobal/alertnow/AlertNow$OptionsConfiguration.class
+com/bespinglobal/alertnow/AlertNow.class
+com/bespinglobal/alertnow/Log.class
+com/bespinglobal/alertnow/Options.class
+com/bespinglobal/alertnow/rest/model/LogRequest$LogRequestBuilder.class
+com/bespinglobal/alertnow/Level.class
+com/bespinglobal/alertnow/rest/RestServiceImpl.class

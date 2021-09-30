@@ -1,12 +1,16 @@
 package com.bespinglobal.alertnow;
 
-import com.bespinglobal.alertnow.rest.RestService;
-import com.bespinglobal.alertnow.rest.RestServiceImpl;
+import com.bespinglobal.alertnow.client.Client;
+import com.bespinglobal.alertnow.client.ClientFactory;
+import com.bespinglobal.alertnow.config.Options;
+import com.bespinglobal.alertnow.models.Integration;
+import com.bespinglobal.alertnow.models.Level;
+import org.jetbrains.annotations.NotNull;
 
-import javax.validation.constraints.NotNull;
+import java.util.Objects;
 
 public class AlertNow {
-    private static RestService restService;
+    private static Client client;
 
     public static void init(@NotNull OptionsConfiguration<Options> optionsConfiguration) {
         Options options = new Options();
@@ -15,24 +19,26 @@ public class AlertNow {
     }
 
     private static void init(@NotNull Options options) {
-        restService = new RestServiceImpl(options);
+        Objects.requireNonNull(options, "AlertNow was not init!");
+        client = new ClientFactory(options).get();
     }
 
     public interface OptionsConfiguration<T extends Options> {
         void configure(@NotNull T var1);
     }
 
-    public static void info(String message) {
-        Log log = new Log();
+    public static void info(@NotNull String message) {
+        Integration log = new Integration();
         log.setLevel(Level.INFO);
         log.setMessage(message);
-        restService.postLog(log);
+        Objects.requireNonNull(client, "Options is not configured!");
+        client.post(log);
     }
 
-    public static void error(Throwable throwable) {
-        Log log = new Log();
+    public static void error(@NotNull Throwable throwable) {
+        Integration log = new Integration();
         log.setLevel(Level.ERROR);
         log.setMessage(throwable.getLocalizedMessage());
-        restService.postLog(log);
+        client.post(log);
     }
 }

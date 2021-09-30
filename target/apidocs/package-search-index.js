@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"com.bespinglobal.alertnow"},{"l":"com.bespinglobal.alertnow.rest"},{"l":"com.bespinglobal.alertnow.rest.model"}]
