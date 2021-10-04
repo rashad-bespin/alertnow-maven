@@ -4,7 +4,7 @@
 
 <h5>2. Create new maven application and add AlertNow dependency to your project’s
 pom.xml file.</h5>
----java
+---
 <dependency>
    <groupId>com.bespinglobal.alertnow</groupId>
    <artifactId>log-collector</artifactId>
@@ -13,7 +13,7 @@ pom.xml file.</h5>
 ---
 
 <h5>3. Init AlertNow configs</h5>
-```java
+```
 import com.bespinglobal.alertnow.logcollector.AlertNow;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,14 +26,13 @@ public class AlertNowConfig {
             options.setApiKey("api key");
             options.setHost("host");
             options.setRelease("package name");
-            //other configs
         });
     }
 }
 ```
 
 <h5>4. Write your logs and information using AlertNow.</h5>
-```java
+```
 import com.bespinglobal.alertnow.logcollector.AlertNow;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
